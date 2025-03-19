@@ -894,31 +894,42 @@ header {
 }
 
 .right-side {
-    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    height: 400px;
+    width: 440px;
 }
 
-h1 {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 10px 0;
+.right-side h1 {
+    font-size: 34px;
+    color: #000;
+    margin-bottom: 15px;
 }
 
-p {
-    font-size: 16px;
-    color: #555;
-    margin: 10px 0 20px;
+.right-side p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
+.right-side button {
+    display: inline-block;
     background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #444;
+.right-side button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: all 1.2s;
 }
