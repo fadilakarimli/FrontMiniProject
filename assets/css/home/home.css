@@ -1090,3 +1090,98 @@ header {
     color: #000;
 }
 
+
+
+
+
+#footer {
+    background: #f1f1f1;
+    padding: 40px 0;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 22%;
+}
+
+.logo-section {
+    width: 30%;
+}
+
+.logo h2 {
+    color: #d48c2a;
+}
+
+.logo p {
+    font-style: italic;
+    color: #333;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.newsletter button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.payment-icons img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.social-icons i{
+  color: black;
+}
+
+
+/* .paypal {
+    width: 100px;
+    height: 100px;
+} */
