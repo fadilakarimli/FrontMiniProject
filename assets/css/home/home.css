@@ -319,7 +319,7 @@ header {
 /* main */
 
 #hero {
-   background-image: url(../../img/home/banner-background.jpg);
+    background-image: url(../../img/home/banner-background.jpg);
     height: 100%;
     position: relative;
     padding: 100px 0;
@@ -877,7 +877,7 @@ header {
     text-align: center;
     padding: 5px;
     border: 1px solid #ddd;
-    min-width: 100px;
+    min-width: 87px;
 }
 
 .time-unit span {
@@ -933,3 +933,109 @@ header {
     border: 1px solid black;
     transition: all 1.2s;
 }
+
+
+
+/* todays deals */
+
+#slider-area {
+    position: relative;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.slider-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.slider-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slider-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background-color: #333;
+}
+
+
+/* styles.css */
+
+
+#blog-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+#blog-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.blog-card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-entry {
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-entry img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.blog-entry .blog-date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.blog-entry p {
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    background: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background: #0056b3;
+}
+
+

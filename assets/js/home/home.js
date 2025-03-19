@@ -1,4 +1,6 @@
-"use -strict"
+"use strict"
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -120,3 +122,7 @@ closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active'); 
     logoBar.style.display = 'none'; 
 });
+
+
+
+
