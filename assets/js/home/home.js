@@ -81,6 +81,9 @@ const body = document.body;
 const sidebar = document.createElement('div');
 sidebar.classList.add('sidebar');
 
+const logoBar = document.createElement('div');
+logoBar.classList.add('logo-bar'); 
+
 const closeBtn = document.createElement('div');
 closeBtn.classList.add('close-menu');
 closeBtn.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
@@ -103,14 +106,17 @@ socialMedia.forEach(media => {
 });
 
 sidebar.appendChild(closeBtn);
+sidebar.appendChild(logoBar); 
 sidebar.appendChild(socialIcons);
 
 body.appendChild(sidebar);
 
 menuBar.addEventListener('click', () => {
     sidebar.classList.add('active'); 
+    logoBar.style.display = 'block'; 
 });
 
 closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active'); 
+    logoBar.style.display = 'none'; 
 });
