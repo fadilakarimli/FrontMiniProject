@@ -12,6 +12,7 @@ header {
     cursor: pointer;
     z-index: 101;
 }
+
 /* Qara Ekran */
 .search-overlay {
     position: fixed;
@@ -46,11 +47,11 @@ header {
 
 /* Sidebar */
 .logo-bar {
-    display: none; 
+    display: none;
     margin-left: 30px;
     width: 80%;
     height: 150px;
-    background: url('../../img/home/logo-bar.png') center/contain no-repeat; 
+    background: url('../../img/home/logo-bar.png') center/contain no-repeat;
     margin-top: 65px;
 }
 
@@ -61,7 +62,7 @@ header {
 .sidebar {
 
     background: #1a1a1a;
-    z-index: 999; 
+    z-index: 999;
     background: url('../../img/home/logo-bar.png') center/cover no-repeat;
     position: fixed;
     top: 0;
@@ -79,14 +80,14 @@ header {
 }
 
 .sidebar.active {
-    right: 0; 
+    right: 0;
 }
 
 .social-icons {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: auto; 
+    gap: 4px;
+    justify-content: start;
+    margin-top: auto;
 }
 
 .social-icons a {
@@ -97,7 +98,7 @@ header {
 }
 
 .social-icons a:hover {
-    color: #ff6f61; 
+    color: #ff6f61;
 }
 
 .close-menu {
@@ -144,19 +145,19 @@ header {
     width: 100%;
     background-color: #fff;
     padding: 10px 0;
-    position: fixed; 
+    position: fixed;
     top: 0;
-    width: 100%; 
+    width: 100%;
     z-index: 1000;
-    background-color: #fff; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .submenu {
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
-    transform: perspective(600px) rotateX(-90deg); 
-    transform-origin: top; 
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: top;
     left: 0px;
     opacity: 0;
     visibility: hidden;
@@ -164,14 +165,14 @@ header {
     top: 100%;
     text-align: left;
     background: rgb(255, 255, 255);
-    transition: transform 0.6s ease, opacity 0.6s ease; 
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .dropdown:hover .submenu {
-    display: block; 
+    display: block;
     visibility: visible;
     opacity: 1;
-    transform: perspective(600px) rotateX(0deg); 
+    transform: perspective(600px) rotateX(0deg);
 }
 
 
@@ -185,8 +186,8 @@ header {
 .submenu-shop {
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
-    transform: perspective(600px) rotateX(-90deg); 
-    transform-origin: top; 
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: top;
     left: 0px;
     opacity: 0;
     visibility: hidden;
@@ -200,7 +201,7 @@ header {
 .dropdown-shop:hover .submenu {
     visibility: visible;
     opacity: 1;
-    transform: perspective(600px) rotateX(0deg); 
+    transform: perspective(600px) rotateX(0deg);
     display: block;
 }
 
@@ -215,7 +216,7 @@ header {
 }
 
 .submenu-shop li a:hover {
-    color: #f39829; 
+    color: #f39829;
 }
 
 #navbar .main-menu ul {
@@ -313,7 +314,7 @@ header {
     .main {
         flex-direction: column;
     }
-} 
+}
 
 
 /* main */
@@ -323,7 +324,7 @@ header {
     height: 100%;
     position: relative;
     padding: 100px 0;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 #hero .hero-container {
@@ -377,10 +378,10 @@ header {
     height: 470px;
     position: absolute;
     top: -40%;
-    right : 10px; 
+    right: 10px;
     bottom: 0;
     max-width: 800px;
-    z-index: 1; 
+    z-index: 1;
 }
 
 #hero .hero-image img {
@@ -398,20 +399,20 @@ header {
 
 .collections-container {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "small1 large small3"
-        "small2 large small4"; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+        "small2 large small4";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     align-items: center;
 }
 
 .collection-item:nth-child(1) {
-    grid-area: small1; 
+    grid-area: small1;
 }
 
 .collection-item:nth-child(2) {
-    grid-area: small2; 
+    grid-area: small2;
 }
 
 .collection-item:nth-child(3) {
@@ -419,11 +420,11 @@ header {
 }
 
 .collection-item:nth-child(4) {
-    grid-area: small3; 
+    grid-area: small3;
 }
 
 .collection-item:nth-child(5) {
-    grid-area: small4; 
+    grid-area: small4;
 }
 
 .collection-item {
@@ -433,23 +434,23 @@ header {
 }
 
 .collection-item.large img {
-    width: 100%; 
-    height: 450px; 
+    width: 100%;
+    height: 450px;
     object-fit: cover;
 }
 
 .collection-item.small img {
-    width: 100%; 
-    height: 200px; 
+    width: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
 .collection-item img {
-    transition: transform 0.8s ease; 
+    transition: transform 0.8s ease;
 }
 
 .collection-item img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .collection-info {
@@ -484,23 +485,23 @@ header {
     border: 1px solid black;
 }
 
- @media (max-width: 743px) {
+@media (max-width: 743px) {
     .collections-container {
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 10px; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 
     .collection-item {
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 576px) {
     .collections-container {
-        grid-template-columns: 1fr; 
-        gap: 15px; 
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
-} 
+}
 
 /* hotproduct */
 
@@ -529,6 +530,7 @@ header {
     margin-bottom: 30px;
     gap: 10px;
 }
+
 .product-categories button {
     background-color: transparent;
     border: none;
@@ -541,12 +543,12 @@ header {
 }
 
 .product-categories button:hover {
-    color: orange; 
+    color: orange;
 }
 
 .product-categories button.active {
-    color: orange; 
-    border-bottom: 2px solid orange; 
+    color: orange;
+    border-bottom: 2px solid orange;
 }
 
 
@@ -560,7 +562,7 @@ header {
 }
 
 .product-item {
-    position: relative; 
+    position: relative;
     background-color: white;
     border: 1px solid #ddd;
     overflow: hidden;
@@ -568,7 +570,8 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.product-item .heart-icon{
+
+.product-item .heart-icon {
     border-radius: 50%;
     background-color: white;
     position: absolute;
@@ -578,9 +581,10 @@ header {
     height: 24px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    
+
 }
-.product-item .heart-icon:hover{
+
+.product-item .heart-icon:hover {
     border-radius: 50%;
     background-color: orange;
     transform: scale(1.2);
@@ -599,20 +603,22 @@ header {
     height: 80%;
     object-fit: cover;
     margin-bottom: 10px;
-    opacity: 0; 
-    transition: opacity 1.2s ease; 
+    opacity: 0;
+    transition: opacity 1.2s ease;
 }
 
 .product-item:hover .product-image {
-    opacity: 0; 
+    opacity: 0;
 }
 
 .product-item:hover .hover-image {
     opacity: 1;
 }
+
 .product-item:hover .hover-image .btn-cart {
-    opacity: 1; 
+    opacity: 1;
 }
+
 .product-item img {
     width: 100%;
     height: 80%;
@@ -625,7 +631,7 @@ header {
     top: 10px;
     left: 10px;
     color: white;
-    background-color: green; 
+    background-color: green;
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 3px;
@@ -659,7 +665,7 @@ header {
     font-size: 16px;
     background-color: white;
     border-radius: 50%;
-    opacity: 1; 
+    opacity: 1;
     width: 30px;
     height: 30px;
     display: flex;
@@ -671,24 +677,24 @@ header {
 
 .product-item .heart-icon:hover {
     background-color: orange;
-    transform: scale(1.2); 
-    color: white; 
+    transform: scale(1.2);
+    color: white;
 }
 
 .product-item .share-icon,
 .product-item .compare-icon {
     position: absolute;
     top: 10px;
-    right: 50px; 
+    right: 50px;
     color: #ddd;
     font-size: 16px;
-    opacity: 0; 
+    opacity: 0;
     cursor: pointer;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .product-item .compare-icon {
-    right: 90px; 
+    right: 90px;
 }
 
 .product-item:hover .heart-icon,
@@ -699,30 +705,30 @@ header {
 
 .add-to-cart {
     position: absolute;
-    bottom: 100px; 
+    bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
     color: orange;
     border: none;
-    padding: 12px 55px; 
-    font-size: 12px;    
-    border-radius: 5px; 
+    padding: 12px 55px;
+    font-size: 12px;
+    border-radius: 5px;
     cursor: pointer;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 5;
-    width: auto; 
-    white-space: nowrap; 
-    text-align: center; 
-    min-width: 200px; 
+    width: auto;
+    white-space: nowrap;
     text-align: center;
-    white-space: nowrap; 
+    min-width: 200px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .product-item:hover .add-to-cart {
-    opacity: 1; 
-    transform: translateX(-50%) scale(1.1); 
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1);
 }
 
 .product-item .hover-image {
@@ -732,21 +738,21 @@ header {
     width: 100%;
     height: 80%;
     object-fit: cover;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 1.2s ease;
 }
 
 .product-item:hover .hover-image {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .product-item:hover .product-image {
-    opacity: 0; 
+    opacity: 0;
 }
 
 .product-item .share-icon {
     position: absolute;
-    top: 50px; 
+    top: 50px;
     right: 10px;
     font-weight: 400;
     color: black;
@@ -759,15 +765,15 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
     z-index: 5;
 }
 
 .product-item .compare-icon {
     position: absolute;
-    top: 90px; 
-    right: 10px; 
+    top: 90px;
+    right: 10px;
     color: black;
     font-size: 14px;
     font-weight: 400;
@@ -786,54 +792,56 @@ header {
 
 .product-item:hover .share-icon,
 .product-item:hover .compare-icon {
-    opacity: 1; 
-    background-color: white; 
+    opacity: 1;
+    background-color: white;
     transform: scale(1.2);
-    color: black   ; 
+    color: black;
 }
 
 
 @media (max-width: 664px) {
     .product-categories {
-        flex-direction: column; 
-        align-items: stretch; 
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .product-categories button {
-        font-size: 14px; 
-        padding: 8px 15px; 
+        font-size: 14px;
+        padding: 8px 15px;
     }
 }
+
 @media (max-width: 394px) {
     .product-categories button {
-        font-size: 14px; 
-        padding: 8px 15px; 
-        white-space: nowrap; 
+        font-size: 14px;
+        padding: 8px 15px;
+        white-space: nowrap;
     }
 
     .product-categories {
-        flex-wrap: wrap; 
-        gap: 5px; 
+        flex-wrap: wrap;
+        gap: 5px;
     }
 }
+
 @media (min-width: 992px) {
     .product-categories {
-        justify-content: center; 
-        gap: 15px; 
+        justify-content: center;
+        gap: 15px;
     }
 
     .product-categories button {
-        font-size: 16px; 
-        padding: 10px 25px; 
+        font-size: 16px;
+        padding: 10px 25px;
     }
-} 
+}
 
 
 /* t-shirt collection  */
 #promotion-banner {
     position: relative;
     width: 100%;
-    height: 500px; 
+    height: 500px;
 }
 
 .promotion-container {
@@ -851,7 +859,7 @@ header {
 .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .content {
@@ -1021,11 +1029,16 @@ header {
     font-size: 14px;
     display: block;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .blog-entry img {
     width: 100%;
     margin-bottom: 15px;
+    transition: transform 0.8s ease;
+}
+.blog-entry img:hover {
+  transform: scale(1.05);
 }
 
 .blog-entry p {
@@ -1033,6 +1046,10 @@ header {
     color: #444;
     line-height: 1.5;
     margin-bottom: 15px;
+}
+
+.blog-entry .read-more:hover {
+    color: orange
 }
 
 .read-more {
@@ -1049,8 +1066,9 @@ header {
 }
 
 .read-more:hover {
-    background: black;
-    color: white;
+    color: black;
+    border: 1px solid orange;
+
 }
 
 .read-more::after {
@@ -1065,6 +1083,12 @@ header {
     /* padding: 40px; */
     background-color: #ffffff;
     text-align: center;
+}
+
+#instagram-section h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
 }
 
 .instagram-container {
@@ -1126,6 +1150,10 @@ header {
     flex-wrap: wrap;
 }
 
+.logo-content {
+    margin-top: 27px;
+}
+
 .footer-section {
     width: 22%;
 }
@@ -1162,9 +1190,21 @@ header {
     color: #333;
 }
 
+.footer-section ul li a:hover {
+    color: #d18b46;
+    transition: all 0.5s;
+
+}
+
+
 .social-icons a {
     margin-right: 10px;
     font-size: 18px;
+}
+
+.footer-section .social-icons a :hover {
+    color: #d18b46;
+    transition: all 0.5s;
 }
 
 .newsletter input {
@@ -1173,6 +1213,7 @@ header {
     margin-bottom: 10px;
     border: 1px solid #ccc;
 }
+
 
 .newsletter button {
     background: black;
@@ -1185,19 +1226,35 @@ header {
 .footer-bottom {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
     padding-top: 20px;
+    background-color: black;
+    color: white;
+    margin-top: 77px;
+}
+
+.footer-bottom span {
+    color: #d18b46;
+}
+
+.footer-bottom .copyright {
+    margin-left: 10px;
 }
 
 .payment-icons img {
-    width: 100px;
-    margin-right: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-right: 15px;
 }
 
-.social-icons i{
-  color: black;
+
+.social-icons i {
+    color: black;
+}
+
+.container,
+.footer-content,
+.footer-bottom {
+    margin: 0 auto;
 }
 
 
