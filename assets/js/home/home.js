@@ -1,57 +1,52 @@
-"use strict"
-
-
-
+"use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.querySelector(".dropdown");
-    const submenu = dropdown.querySelector(".submenu");
+  const dropdown = document.querySelector(".dropdown");
+  const submenu = dropdown.querySelector(".submenu");
 
-    dropdown.addEventListener("mouseenter", function () {
-        submenu.style.display = "block";
-        submenu.style.visibility = "visible";
-        submenu.style.opacity = "1";
-        submenu.style.transform = "perspective(600px) rotateX(0deg)"; 
-    });
+  dropdown.addEventListener("mouseenter", function () {
+    submenu.style.display = "block";
+    submenu.style.visibility = "visible";
+    submenu.style.opacity = "1";
+    submenu.style.transform = "perspective(600px) rotateX(0deg)";
+  });
 
-    dropdown.addEventListener("mouseleave", function () {
-        submenu.style.transform = "perspective(600px) rotateX(-90deg)"; 
-        submenu.style.opacity = "0";
+  dropdown.addEventListener("mouseleave", function () {
+    submenu.style.transform = "perspective(600px) rotateX(-90deg)";
+    submenu.style.opacity = "0";
 
-        setTimeout(() => {
-            submenu.style.visibility = "hidden";
-            submenu.style.display = "none";
-        }, 500); 
-    });
+    setTimeout(() => {
+      submenu.style.visibility = "hidden";
+      submenu.style.display = "none";
+    }, 500);
+  });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
-    const dropdown = document.querySelector(".dropdown-shop");
-    const submenu = dropdown.querySelector(".submenu-shop");
+  const dropdown = document.querySelector(".dropdown-shop");
+  const submenu = dropdown.querySelector(".submenu-shop");
 
-    dropdown.addEventListener("mouseenter", function () {
-        submenu.style.display = "block";
-        submenu.style.visibility = "visible";
-        submenu.style.opacity = "1";
-        submenu.style.transform = "perspective(600px) rotateX(0deg)"; 
-    });
+  dropdown.addEventListener("mouseenter", function () {
+    submenu.style.display = "block";
+    submenu.style.visibility = "visible";
+    submenu.style.opacity = "1";
+    submenu.style.transform = "perspective(600px) rotateX(0deg)";
+  });
 
-    dropdown.addEventListener("mouseleave", function () {
-        submenu.style.transform = "perspective(600px) rotateX(-90deg)";
-        submenu.style.opacity = "0";
+  dropdown.addEventListener("mouseleave", function () {
+    submenu.style.transform = "perspective(600px) rotateX(-90deg)";
+    submenu.style.opacity = "0";
 
-        setTimeout(() => {
-            submenu.style.visibility = "hidden";
-            submenu.style.display = "none";
-        }, 500);
-    });
+    setTimeout(() => {
+      submenu.style.visibility = "hidden";
+      submenu.style.display = "none";
+    }, 500);
+  });
 });
 
-
-const searchIcon = document.querySelector('.search .fa-magnifying-glass');
-const searchOverlay = document.createElement('div');
-searchOverlay.classList.add('search-overlay');
+const searchIcon = document.querySelector(".search .fa-magnifying-glass");
+const searchOverlay = document.createElement("div");
+searchOverlay.classList.add("search-overlay");
 
 searchOverlay.innerHTML = `
     <div class="search-box">
@@ -59,137 +54,286 @@ searchOverlay.innerHTML = `
     </div>
 `;
 
-const closeIcon = document.createElement('div');
-closeIcon.classList.add('close-icon');
+const closeIcon = document.createElement("div");
+closeIcon.classList.add("close-icon");
 closeIcon.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
 
 searchOverlay.appendChild(closeIcon);
 
 document.body.appendChild(searchOverlay);
 
-searchIcon.addEventListener('click', () => {
-    searchOverlay.classList.add('active'); 
+searchIcon.addEventListener("click", () => {
+  searchOverlay.classList.add("active");
 });
 
-closeIcon.addEventListener('click', () => {
-    searchOverlay.classList.remove('active'); 
+closeIcon.addEventListener("click", () => {
+  searchOverlay.classList.remove("active");
 });
 
-
-
-const menuBar = document.querySelector('.menu-bar i'); 
+const menuBar = document.querySelector(".menu-bar i");
 const body = document.body;
 
-const sidebar = document.createElement('div');
-sidebar.classList.add('sidebar');
+const sidebar = document.createElement("div");
+sidebar.classList.add("sidebar");
 
-const logoBar = document.createElement('div');
-logoBar.classList.add('logo-bar'); 
+const logoBar = document.createElement("div");
+logoBar.classList.add("logo-bar");
 
-const closeBtn = document.createElement('div');
-closeBtn.classList.add('close-menu');
+const closeBtn = document.createElement("div");
+closeBtn.classList.add("close-menu");
 closeBtn.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
 
-const socialIcons = document.createElement('div');
-socialIcons.classList.add('social-icons');
+const socialIcons = document.createElement("div");
+socialIcons.classList.add("social-icons");
 
 const socialMedia = [
-    { href: '#', className: 'fa fa-facebook' },
-    { href: '#', className: 'fa fa-twitter' },
-    { href: '#', className: 'fa fa-instagram' },
-    { href: '#', className: 'fa fa-linkedin' },
+  { href: "#", className: "fa fa-facebook" },
+  { href: "#", className: "fa fa-twitter" },
+  { href: "#", className: "fa fa-instagram" },
+  { href: "#", className: "fa fa-linkedin" },
 ];
 
-socialMedia.forEach(media => {
-    const link = document.createElement('a');
-    link.href = media.href;
-    link.innerHTML = `<i class="${media.className}"></i>`;
-    socialIcons.appendChild(link);
+socialMedia.forEach((media) => {
+  const link = document.createElement("a");
+  link.href = media.href;
+  link.innerHTML = `<i class="${media.className}"></i>`;
+  socialIcons.appendChild(link);
 });
 
 sidebar.appendChild(closeBtn);
-sidebar.appendChild(logoBar); 
+sidebar.appendChild(logoBar);
 sidebar.appendChild(socialIcons);
 
 body.appendChild(sidebar);
 
-menuBar.addEventListener('click', () => {
-    sidebar.classList.add('active'); 
-    logoBar.style.display = 'block'; 
+menuBar.addEventListener("click", () => {
+  sidebar.classList.add("active");
+  logoBar.style.display = "block";
 });
 
-closeBtn.addEventListener('click', () => {
-    sidebar.classList.remove('active'); 
-    logoBar.style.display = 'none'; 
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+  logoBar.style.display = "none";
 });
-
 
 // tabmenu
 
 const productData = {
   "NEW ARRIVAL": [
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New", price: 29.99 },
-    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot", price: 29.12 },
-    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-white.png", label: "New", price: 29.21 },
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New", price: 29.13 },
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot", price: 29.56 },
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" , price: 29.34},
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" , price: 345.99},
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot" , price: 34.345}
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 29.99,
+    },
+    {
+      image: "./assets/img/home/dress-blue.png",
+      hoverImage: "./assets/img/home/women-dress.png",
+      label: "Hot",
+      price: 29.12,
+    },
+    {
+      image: "./assets/img/home/dress-white-glass.png",
+      hoverImage: "./assets/img/home/women-white.png",
+      label: "New",
+      price: 29.21,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "New",
+      price: 29.13,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "Hot",
+      price: 29.56,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "New",
+      price: 29.34,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "New",
+      price: 345.99,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "Hot",
+      price: 34.345,
+    },
   ],
-  "TRENDING": [
-    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-white.png", label: "New", price: 45.99 },
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-blue.png", label: "Hot", price: 39.12 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New", price: 55.21 },
-    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot", price: 25.99 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New", price: 49.00 }
+  TRENDING: [
+    {
+      image: "./assets/img/home/dress-white-glass.png",
+      hoverImage: "./assets/img/home/women-white.png",
+      label: "New",
+      price: 45.99,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "Hot",
+      price: 39.12,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "New",
+      price: 55.21,
+    },
+    {
+      image: "./assets/img/home/dress-blue.png",
+      hoverImage: "./assets/img/home/women-dress.png",
+      label: "Hot",
+      price: 25.99,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 49.0,
+    },
   ],
   "BEST SELLERS": [
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot",price: 49.00 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
-
-
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "Hot",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 49.0,
+    },
   ],
-  "FEATURED": [
-    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" ,price: 49.00},
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/women-white.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot",price: 49.00 },
-    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-dress.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 }
+  FEATURED: [
+    {
+      image: "./assets/img/home/dress-blue.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/women-white.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/dress-blue.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "Hot",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/dress-white-glass.png",
+      hoverImage: "./assets/img/home/women-dress.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 49.0,
+    },
   ],
   "ON SALE": [
-    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot",price: 49.00 },
-    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "Hot",price: 49.00 },
-    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New",price: 49.00 },
-    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "New",price: 49.00 }
-  ]
+    {
+      image: "./assets/img/home/dress-blue.png",
+      hoverImage: "./assets/img/home/women-dress.png",
+      label: "Hot",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/dress-white-glass.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/dress-blue.png",
+      hoverImage: "./assets/img/home/women-dress.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-white.png",
+      hoverImage: "./assets/img/home/dress-blue.png",
+      label: "Hot",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/women-dress.png",
+      hoverImage: "./assets/img/home/dress-white-glass.png",
+      label: "New",
+      price: 49.0,
+    },
+    {
+      image: "./assets/img/home/dress-blue.png",
+      hoverImage: "./assets/img/home/women-dress.png",
+      label: "New",
+      price: 49.0,
+    },
+  ],
 };
 
-const buttons = document.querySelectorAll('.product-categories button');
-const row = document.querySelector('.row');
+const buttons = document.querySelectorAll(".product-categories button");
+const row = document.querySelector(".row");
 
 function showProducts(category) {
-  row.innerHTML = ""; 
-  
+  row.innerHTML = "";
+
   const products = productData[category];
-  
-  products.forEach(product => {
-    const col = document.createElement('div');
-    col.className = 'col-lg-3 col-md-4 col-sm-6 col-12 mt-3';
-    
+
+  products.forEach((product) => {
+    const col = document.createElement("div");
+    col.className = "col-lg-3 col-md-4 col-sm-6 col-12 mt-3";
+
     const price = product.price ? product.price.toFixed(2) : "0.00";
-    
+
     col.innerHTML = `
       <div class="product-item">
-        <span class="product-label ${product.label.toLowerCase()}">${product.label}</span>
+        <span class="product-label ${product.label.toLowerCase()}">${
+      product.label
+    }</span>
         <img class="product-image" src="${product.image}" alt="${category}">
-        <img class="hover-image" src="${product.hoverImage}" alt="${category} Hover">
+        <img class="hover-image" src="${
+          product.hoverImage
+        }" alt="${category} Hover">
         <div class="icon-container">
           <span class="heart-icon">
             <i class="fa-regular fa-heart"></i>
@@ -210,10 +354,10 @@ function showProducts(category) {
   });
 }
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
 
     const category = button.textContent.trim();
     showProducts(category);
@@ -221,8 +365,6 @@ buttons.forEach(button => {
 });
 
 showProducts("NEW ARRIVAL");
-
-
 
 //   document.addEventListener("DOMContentLoaded", function () {
 //     const products = document.querySelectorAll(".product-item1");
@@ -288,4 +430,26 @@ showProducts("NEW ARRIVAL");
 //     showItems();
 //     startAutoPlay();
 // });
+
+const slider = document.querySelector(".test123");
+const dots = document.querySelectorAll(".dot");
+let index = 0;
+
+const slideWidth = slider.children[0].offsetWidth + 15;
+
+function moveSlider(newIndex) {
+  index = newIndex;
+  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+  updateDots();
+}
+
+function updateDots() {
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => moveSlider(i));
+});
 
