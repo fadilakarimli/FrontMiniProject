@@ -55,7 +55,8 @@ searchOverlay.classList.add('search-overlay');
 
 searchOverlay.innerHTML = `
     <div class="search-box">
-        <input type="text" placeholder="Type your search...">
+        <input type="text" class="typesearch" placeholder="Type your search...">
+        <span class="search-tag">Search</span>
     </div>
 `;
 
@@ -75,8 +76,6 @@ closeIcon.addEventListener('click', () => {
     searchOverlay.classList.remove('active'); 
 });
 
-
-
 const menuBar = document.querySelector('.menu-bar i'); 
 const body = document.body;
 
@@ -89,6 +88,14 @@ logoBar.classList.add('logo-bar');
 const closeBtn = document.createElement('div');
 closeBtn.classList.add('close-menu');
 closeBtn.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
+
+const contactInfo = document.createElement('div');
+contactInfo.classList.add('contact-info');
+contactInfo.innerHTML = `
+    <p><strong>Address:</strong> Your address goes here.</p>
+    <p><strong>Call Us:</strong> 0123456789, 0123456789</p>
+    <p><strong>Email:</strong> demo@example.com</p>
+`;
 
 const socialIcons = document.createElement('div');
 socialIcons.classList.add('social-icons');
@@ -109,6 +116,7 @@ socialMedia.forEach(media => {
 
 sidebar.appendChild(closeBtn);
 sidebar.appendChild(logoBar); 
+sidebar.appendChild(contactInfo);
 sidebar.appendChild(socialIcons);
 
 body.appendChild(sidebar);
@@ -122,6 +130,7 @@ closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active'); 
     logoBar.style.display = 'none'; 
 });
+
 
 
 // tabmenu
@@ -224,68 +233,25 @@ showProducts("NEW ARRIVAL");
 
 
 
-//   document.addEventListener("DOMContentLoaded", function () {
-//     const products = document.querySelectorAll(".product-item1");
-//     const dots = document.querySelectorAll(".dot");
-//     let currentIndex = 0;
-//     const itemsPerPage = 4;
-//     let autoPlayInterval;
-//     const maxIndex = products.length - itemsPerPage;
+const slider = document.querySelector(".slider-sl");
+const dots = document.querySelectorAll(".dot");
+let index = 0;
 
-//     function showItems() {
-//         products.forEach((item, i) => {
-//             if (i >= currentIndex && i < currentIndex + itemsPerPage) {
-//                 item.style.visibility = "visible";
-//                 item.style.opacity = "1";
-//                 item.style.transform = "translateY(0)";
-//             } else {
-//                 item.style.visibility = "hidden";
-//                 item.style.opacity = "0";
-//                 item.style.transform = "translateY(10px)";
-//             }
-//         });
+const slideWidth = slider.children[0].offsetWidth + 15;
 
-//         dots.forEach((dot, i) => {
-//             dot.classList.toggle("active", currentIndex === i);
-//         });
-//     }
+function moveSlider(newIndex) {
+  index = newIndex;
+  slider.style.transform = `translateX(-${index * slideWidth}px)`;
+  updateDots();
+}
 
-//     function nextSlide() {
-//         if (currentIndex < maxIndex) {
-//             currentIndex++;
-//         } else {
-//             currentIndex = 0;
-//         }
-//         showItems();
-//     }
+function updateDots() {
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+}
 
-//     function prevSlide() {
-//         if (currentIndex > 0) {
-//             currentIndex--;
-//         } else {
-//             currentIndex = maxIndex;
-//         }
-//         showItems();
-//     }
-
-//     function startAutoPlay() {
-//         autoPlayInterval = setInterval(nextSlide, 3000);
-//     }
-
-//     function stopAutoPlay() {
-//         clearInterval(autoPlayInterval);
-//     }
-
-//     dots.forEach((dot, i) => {
-//         dot.addEventListener("click", () => {
-//             currentIndex = i;
-//             showItems();
-//             stopAutoPlay();
-//             startAutoPlay();
-//         });
-//     });
-
-//     showItems();
-//     startAutoPlay();
-// });
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => moveSlider(i));
+});
 

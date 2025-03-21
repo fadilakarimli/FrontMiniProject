@@ -44,11 +44,28 @@ header {
     cursor: pointer;
     z-index: 101;
 }
+.search-tag{
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    color: #444;
+}
+.typesearch{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
 
 /* Sidebar */
+.contact-info p {
+    margin: 10px 0;
+    font-size: 14px;
+}
 .logo-bar {
     display: none;
-    margin-left: 30px;
+    margin-left: 5px;
     width: 80%;
     height: 150px;
     background: url('../../img/home/logo-bar.png') center/contain no-repeat;
@@ -60,7 +77,8 @@ header {
 }
 
 .sidebar {
-
+    align-items: center;
+    text-align: center;
     background: #1a1a1a;
     z-index: 999;
     background: url('../../img/home/logo-bar.png') center/cover no-repeat;
@@ -85,20 +103,31 @@ header {
 
 .social-icons {
     display: flex;
-    gap: 4px;
-    justify-content: start;
-    margin-top: auto;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: white;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); 
+    font-size: 20px;
+}
+.social-icons i{
+    color: white!important;
+    margin-top: 10px!important;
+}
+
+.social-icons a i {
+    font-size: 24px;
+    color: white;
 }
 
 .social-icons a:hover {
-    color: #ff6f61;
+    background-color: white!important;
+    color: black!important;
 }
 
 .close-menu {
@@ -162,7 +191,7 @@ header {
     opacity: 0;
     visibility: hidden;
     z-index: 99;
-    top: 100%;
+    top: 190%;
     text-align: left;
     background: rgb(255, 255, 255);
     transition: transform 0.6s ease, opacity 0.6s ease;
@@ -177,47 +206,14 @@ header {
 
 
 .submenu li a {
-    padding: 10px 20px;
+    padding: 10px 50px;
     display: block;
     color: #000;
     white-space: nowrap;
 }
 
-.submenu-shop {
-    position: absolute;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
-    transform: perspective(600px) rotateX(-90deg);
-    transform-origin: top;
-    left: 0px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 99;
-    top: 100%;
-    text-align: left;
-    background: rgb(255, 255, 255);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
 
-.dropdown-shop:hover .submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: perspective(600px) rotateX(0deg);
-    display: block;
-}
 
-.submenu-shop li {
-    padding: 10px 20px;
-}
-
-.submenu-shop li a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-.submenu-shop li a:hover {
-    color: #f39829;
-}
 
 #navbar .main-menu ul {
     display: flex;
@@ -937,6 +933,11 @@ header {
 
 
 /* todays deals */
+.slider-sec{
+    display: flex;
+    overflow: hidden;
+    gap: 15px;
+}
 
 #slider-area {
     position: relative;
@@ -1243,38 +1244,37 @@ header {
     box-sizing: border-box;
 }
 
-.dots {
-    text-align: center;
+
+.slider-sl {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .product-item1 {
+    width: 100%;
+  }
+  
+  .dots {
     margin-top: 20px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
+    text-align: center;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
     border-radius: 50%;
-    background-color: #ccc;
     display: inline-block;
     margin: 0 5px;
     cursor: pointer;
-}
-
-.dot.active {
-    background-color: orange;
-}
-
-.slider-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.slider-dot.active {
+  }
+  
+  .dot.active {
     background-color: #333;
-}
+  }
+  
 
 
 /* blog */
@@ -1573,7 +1573,6 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    font-family: Arial, sans-serif;
   }
   
   #banner .banner-text h1 {
@@ -1614,7 +1613,6 @@ header {
   
 
    /* dots */
-
 
 .dots {
     display: flex;
