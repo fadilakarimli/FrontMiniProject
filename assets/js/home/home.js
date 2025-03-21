@@ -127,116 +127,100 @@ closeBtn.addEventListener('click', () => {
 // tabmenu
 
 const productData = {
-    "NEW ARRIVAL": [
-      { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New" },
-      { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot" },
-      { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-white.png", label: "New" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot" }
-    ],
-    "TRENDING": [
-      { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-white.png", label: "New" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-blue.png", label: "Hot" },
-      { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" },
-      { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot" },
-      { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New" }
-    ],
-    "BEST SELLERS": [
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot" },
-      { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New" }
-    ],
-    "FEATURED": [
-      { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/women-white.png", label: "New" },
-      { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New" },
-      { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot" },
-      { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-dress.png", label: "New" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New" }
-    ],
-    "ON SALE": [
-      { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot" },
-      { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New" },
-      { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" },
-      { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "New" },
-      { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "Hot" },
-      { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" },
-      { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "New" }
-    ]
-  };
+  "NEW ARRIVAL": [
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New", price: 29.99 },
+    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot", price: 29.12 },
+    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-white.png", label: "New", price: 29.21 },
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New", price: 29.13 },
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot", price: 29.56 },
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" , price: 29.34},
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" , price: 345.99},
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot" , price: 34.345}
+  ],
+  "TRENDING": [
+    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-white.png", label: "New", price: 45.99 },
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-blue.png", label: "Hot", price: 39.12 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New", price: 55.21 },
+    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot", price: 25.99 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New", price: 49.00 }
+  ],
+  "BEST SELLERS": [
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot",price: 49.00 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
+
+
+  ],
+  "FEATURED": [
+    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New" ,price: 49.00},
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/women-white.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "Hot",price: 49.00 },
+    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/women-dress.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 }
+  ],
+  "ON SALE": [
+    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "Hot",price: 49.00 },
+    { image: "./assets/img/home/dress-white-glass.png", hoverImage: "./assets/img/home/dress-blue.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/women-white.png", hoverImage: "./assets/img/home/dress-blue.png", label: "Hot",price: 49.00 },
+    { image: "./assets/img/home/women-dress.png", hoverImage: "./assets/img/home/dress-white-glass.png", label: "New",price: 49.00 },
+    { image: "./assets/img/home/dress-blue.png", hoverImage: "./assets/img/home/women-dress.png", label: "New",price: 49.00 }
+  ]
+};
+
+const buttons = document.querySelectorAll('.product-categories button');
+const row = document.querySelector('.row');
+
+function showProducts(category) {
+  row.innerHTML = ""; 
   
+  const products = productData[category];
   
-  const buttons = document.querySelectorAll('.product-categories button');
-  const row = document.querySelector('.row');
-  
-  function showProducts(category) {
-    row.innerHTML = ""; 
+  products.forEach(product => {
+    const col = document.createElement('div');
+    col.className = 'col-lg-3 col-md-4 col-sm-6 col-12 mt-3';
     
-    const products = productData[category];
+    const price = product.price ? product.price.toFixed(2) : "0.00";
     
-    products.forEach(product => {
-      const col = document.createElement('div');
-      col.className = 'col-lg-3 col-md-4 col-sm-6 col-12 mt-3';
-      col.innerHTML = `
-        <div class="product-item">
-          <span class="product-label ${product.label.toLowerCase()}">${product.label}</span>
-          <img class="product-image" src="${product.image}" alt="${category}">
-          <img class="hover-image" src="${product.hoverImage}" alt="${category} Hover">
-          <h3>Sample Product</h3>
-          <p class="price">$${(Math.random() * 50 + 10).toFixed(2)}</p>
-          <button class="add-to-cart btn-cart">Add To Cart</button>
+    col.innerHTML = `
+      <div class="product-item">
+        <span class="product-label ${product.label.toLowerCase()}">${product.label}</span>
+        <img class="product-image" src="${product.image}" alt="${category}">
+        <img class="hover-image" src="${product.hoverImage}" alt="${category} Hover">
+        <div class="icon-container">
+          <span class="heart-icon">
+            <i class="fa-regular fa-heart"></i>
+          </span>
+          <span class="share-icon">
+            <i class="fa-solid fa-expand"></i>
+          </span>
+          <span class="compare-icon">
+            <i class="fa-solid fa-code-compare"></i>
+          </span>
         </div>
-      `;
-      row.appendChild(col);
-    });
-  }
-  
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-  
-      const category = button.textContent.trim();
-      showProducts(category);
-    });
+        <h3>Sample Product</h3>
+        <p class="price">$${price}</p> <!-- Random silindi, məhsulun öz qiyməti yazıldı -->
+        <button class="add-to-cart btn-cart">Add To Cart</button>
+      </div>
+    `;
+    row.appendChild(col);
   });
-  
-  showProducts("NEW ARRIVAL");
-  
-  function showProducts(category) {
-    row.innerHTML = ""; 
-    
-    const products = productData[category];
-    
-    products.forEach(product => {
-      const col = document.createElement('div');
-      col.className = 'col-lg-3 col-md-4 col-sm-6 col-12 mt-3';
-      col.innerHTML = `
-        <div class="product-item">
-          <span class="product-label ${product.label.toLowerCase()}">${product.label}</span>
-          <img class="product-image" src="${product.image}" alt="${category}">
-          <img class="hover-image" src="${product.hoverImage}" alt="${category} Hover">
-          <div class="icon-container">
-            <span class="heart-icon">
-              <i class="fa-regular fa-heart"></i>
-            </span>
-            <span class="share-icon">
-              <i class="fa-solid fa-expand"></i>
-            </span>
-            <span class="compare-icon">
-              <i class="fa-solid fa-code-compare"></i>
-            </span>
-          </div>
-          <h3>Sample Product</h3>
-          <p class="price">$${(Math.random() * 50 + 10).toFixed(2)}</p>
-          <button class="add-to-cart btn-cart">Add To Cart</button>
-        </div>
-      `;
-      row.appendChild(col);
-    });
-  }
+}
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const category = button.textContent.trim();
+    showProducts(category);
+  });
+});
+
+showProducts("NEW ARRIVAL");
 
 
 
