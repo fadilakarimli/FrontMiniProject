@@ -392,6 +392,89 @@ transition: all 0.9s;
 
 
 /* ux ui */
+/* 
+#about_progressbar {
+    background: #f6f6f6;
+    height: 400px;
+    width: 100%;
+
+}
+
+.functionally {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #eee;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    transition: 0.4s linear;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    background: #d35400;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    height: inherit;
+}
+
+.skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: inherit;
+    line-height: inherit;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+    height: inherit;
+    position: absolute;
+    left: 110px;
+    background: #e67e22;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.skillbar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    line-height: inherit;
+    color: #fff;
+    color: rgba(0, 0, 0, 0.4);
+} */
+
+
 
 #functionality-section {
     padding: 50px 20px;
@@ -399,7 +482,7 @@ transition: all 0.9s;
 }
 
 .text-content h1 {
-    font-size: 2.5rem;
+    font-size: 36px;
     color: #333;
     margin-bottom: 20px;
 }
@@ -414,10 +497,11 @@ transition: all 0.9s;
     margin-bottom: 20px;
 }
 
+
 .progress-bars .label {
     font-size: 1rem;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: -3px;
     display: block;
 }
 
@@ -425,7 +509,7 @@ transition: all 0.9s;
     background-color: #ddd;
     border-radius: 5px;
     overflow: hidden;
-    height: 20px;
+    height: 17px;
     width: 100%;
 }
 
@@ -438,6 +522,7 @@ transition: all 0.9s;
     color: white;
     font-size: 0.9rem;
     line-height: 20px;
+    width: 20%;     
 }
 
 
@@ -484,7 +569,76 @@ p {
 
 /* komanda */
 
-#expert-team {
+#team-area .team-name{
+    font-weight: bold;
+}
+
+.team-single {
+    background: #fff;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.team-img img {
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.team-content {
+    background: #fff;
+    padding: 15px;
+    position: relative;
+}
+
+.team-title {
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-social {
+    position: absolute;
+    left: 50%;
+    bottom:-15px;
+    transform: translateX(-50%);
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-social li {
+    list-style: none;
+}
+
+.team-social a {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+
+.team-single:hover .team-title {
+    opacity: 0;
+}
+
+.team-single:hover .team-social {
+    opacity: 1;
+}
+
+.centerheading{
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+
+
+/* #expert-team {
     padding: 50px 20px;
     background-color: #f9f9f9;
     font-family: Arial, sans-serif;
@@ -561,10 +715,10 @@ p {
     font-size: 0.9rem;
     color: #555;
 }
+ */
 
 
-
-
+/* instagram */
 #instagram-section {
     /* padding: 40px; */
     background-color: #ffffff;
@@ -682,12 +836,12 @@ p {
 }
 
 
-.social-icons a {
+.social-iconss a {
     margin-right: 10px;
     font-size: 18px;
 }
 
-.footer-section .social-icons a :hover {
+.footer-section .social-iconss a :hover {
     color: #d18b46;
     transition: all 0.5s;
 }
@@ -723,6 +877,7 @@ p {
 
 .footer-bottom .copyright {
     margin-left: 10px;
+    color: white;
 }
 
 .payment-icons img {
@@ -732,7 +887,7 @@ p {
 }
 
 
-.social-icons i {
+.social-iconss i {
     color: black;
 }
 

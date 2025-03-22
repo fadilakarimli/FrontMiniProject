@@ -231,7 +231,7 @@ buttons.forEach(button => {
 
 showProducts("NEW ARRIVAL");
 
-
+//slider
 
 const slider = document.querySelector(".slider-sl");
 const dots = document.querySelectorAll(".dot");

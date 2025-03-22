@@ -1490,12 +1490,12 @@ header {
 }
 
 
-.social-icons a {
+.social-iconss a {
     margin-right: 10px;
     font-size: 18px;
 }
 
-.footer-section .social-icons a :hover {
+.footer-section .social-iconss a :hover {
     color: #d18b46;
     transition: all 0.5s;
 }
@@ -1540,7 +1540,7 @@ header {
 }
 
 
-.social-icons i {
+.social-iconss i {
     color: black;
 }
 
