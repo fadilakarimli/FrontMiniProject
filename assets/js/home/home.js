@@ -101,10 +101,10 @@ const socialIcons = document.createElement('div');
 socialIcons.classList.add('social-icons');
 
 const socialMedia = [
-    { href: '#', className: 'fa fa-facebook' },
-    { href: '#', className: 'fa fa-twitter' },
-    { href: '#', className: 'fa fa-instagram' },
-    { href: '#', className: 'fa fa-linkedin' },
+    { href: '#', className: 'fa fa-facebook face' },
+    { href: '#', className: 'fa fa-twitter twit' },
+    { href: '#', className: 'fa fa-instagram insta' },
+    { href: '#', className: 'fa fa-linkedin lk' },
 ];
 
 socialMedia.forEach(media => {
@@ -231,13 +231,41 @@ buttons.forEach(button => {
 
 showProducts("NEW ARRIVAL");
 
-//slider
 
+//slider only dot
+
+// const slider = document.querySelector(".slider-sl");
+// const dots = document.querySelectorAll(".dot");
+// let index = 0;
+
+// const slideWidth = slider.children[0].offsetWidth + 15;
+
+// function moveSlider(newIndex) {
+//   index = newIndex;
+//   slider.style.transform = `translateX(-${index * slideWidth}px)`;
+//   updateDots();
+// }
+
+// function updateDots() {
+//   dots.forEach((dot, i) => {
+//     dot.classList.toggle("active", i === index);
+//   });
+// }
+
+// dots.forEach((dot, i) => {
+//   dot.addEventListener("click", () => moveSlider(i));
+// });
+
+
+//slider dot and mouse 
 const slider = document.querySelector(".slider-sl");
 const dots = document.querySelectorAll(".dot");
 let index = 0;
 
 const slideWidth = slider.children[0].offsetWidth + 15;
+let isDragging = false;
+let startX = 0;
+let currentX = 0;
 
 function moveSlider(newIndex) {
   index = newIndex;
@@ -253,5 +281,37 @@ function updateDots() {
 
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => moveSlider(i));
+});
+
+slider.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.clientX;
+  slider.style.cursor = "grabbing";
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDragging) return; 
+
+  currentX = e.clientX; 
+  const diff = startX - currentX;
+
+  if (Math.abs(diff) > slideWidth / 2) {
+    if (diff > 0) {
+      moveSlider(index + 1); 
+    } else {
+      moveSlider(index - 1); 
+    }
+    isDragging = false;
+  }
+});
+
+slider.addEventListener("mouseup", () => {
+  isDragging = false; 
+  slider.style.cursor = "grab"; 
+});
+
+slider.addEventListener("mouseleave", () => {
+  isDragging = false;
+  slider.style.cursor = "grab";
 });
 

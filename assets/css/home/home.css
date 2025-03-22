@@ -52,10 +52,20 @@ header {
     margin-top: 15px;
     color: #444;
 }
-.typesearch{
+
+.typesearch {
+    border: none;
+    border-bottom: 2px solid #fff; 
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
     text-align: center;
     display: flex;
     justify-content: center;
+}
+
+.typesearch:focus {
+    border-bottom: 2px solid orange;
 }
 
 /* Sidebar */
@@ -127,8 +137,23 @@ header {
 
 .social-icons a:hover {
     background-color: white!important;
+}
+.social-icons .face:hover {
     color: black!important;
 }
+.social-icons .twit:hover {
+    color: black!important;
+}
+
+.social-icons .insta:hover {
+    color: black!important;
+}
+
+.social-icons .lk:hover {
+    color: black!important;
+}
+
+
 
 .close-menu {
     position: absolute;
@@ -313,6 +338,7 @@ header {
 }
 
 
+
 /* main */
 
 #hero {
@@ -352,7 +378,7 @@ header {
     margin-bottom: 20px;
 }
 
-#hero .btn {
+#hero .button {
     display: inline-block;
     background: black;
     color: white;
@@ -360,13 +386,13 @@ header {
     font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 5px;
     transition: 0.3s ease-in-out;
 }
 
-#hero .btn:hover {
+#hero .button:hover {
     background: white;
-    color: black;
+    color: black!important;
+    border: 1px solid black;
 }
 
 #hero .hero-image {
@@ -1141,6 +1167,9 @@ header {
     opacity: 1;
     background-color: orange;
 }
+.add-to-cart:hover{
+    color: orange;
+}
 
 .add-to-cart {
     position: absolute;
@@ -1148,7 +1177,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
-    color: orange;
+    color: black;
     border: none;
     padding: 12px 55px;
     font-size: 12px;
@@ -1505,7 +1534,12 @@ header {
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    outline: none;
 }
+.newsletter input:focus {
+    border: 1px solid orange;
+}
+
 
 
 .newsletter button {
