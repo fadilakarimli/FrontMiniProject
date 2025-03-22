@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    
+
 </head>
+
 <body>
     <header>
         <section id="navbar">
@@ -85,8 +87,204 @@
             </div>
         </section>
 
+        <section id="sidebar" class="col-3">
+            <div class="sidebar-container">
+                <div class="row">
+                    <div class="left-sidebar">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search...">
+                            <i class="fas fa-search searchinput"></i>
+                        </div>
+
+                        <h2>Product Categories</h2>
+                        <ul class="category-list">
+                            <li><input type="radio" name="category"> Woman Dresses</li>
+                            <li><input type="radio" name="category"> T-shirts</li>
+                            <li><input type="radio" name="category"> Fashion</li>
+                            <li><input type="radio" name="category"> Bags</li>
+                            <li><input type="radio" name="category"> Jackets</li>
+                            <li><input type="radio" name="category"> Shoes</li>
+                            <li><input type="radio" name="category"> Jeans</li>
+                        </ul>
+                        <hr>
+                        <div class="price-container">
+                            <h2>Price</h2>
+                            <hr>
+                            <div class="range-slider mt-4">
+                                <input type="range" min="0" max="1000" value="250" id="min-price">
+                                <input type="range" min="0" max="1000" value="750" id="max-price">
+                            </div>
+                            <p>Price: <span id="price-value">Add Your Price</span></p>
+                        </div>
+
+                        <div class="color-container">
+                            <h3>Color</h3>
+                            <hr>
+                            <div class="color-options">
+                                <div class="color-box red"></div>
+                                <div class="color-box orange"></div>
+                                <div class="color-box green-dark"></div>
+                                <div class="color-box green-light"></div>
+                                <div class="color-box blue"></div>
+                                <div class="color-box light-blue">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="size-container mt-5">
+                            <h3>Size</h3>
+                            <hr>
+                        </div>
+                        <ul class="size-list">
+                            <li><input type="radio" name="size">XS</li>
+                            <li><input type="radio" name="size">S</li>
+                            <li><input type="radio" name="size">M</li>
+                            <li><input type="radio" name="size">L</li>
+                            <li><input type="radio" name="size">XL</li>
+                        </ul>
+                        <div class="brand-container mt-5">
+                            <h3>Brand</h3>
+                            <hr>
+                        </div>
+                        <ul class="brand-list">
+                            <li><input type="radio" name="brand">Next</li>
+                            <li><input type="radio" name="brand">Adidas</li>
+                            <li><input type="radio" name="brand">Calvin Klein</li>
+                            <li><input type="radio" name="brand">Nike</li>
+                            <li><input type="radio" name="brand">Geox</li>
+                            <li><input type="radio" name="brand">River Island</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="col-9">
+            <div class="row products-grid"> 
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
 
 
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-3">
+                    <div class="product-item">
+                        <span class="product-label new">New</span>
+                        <img class="product-image" src="./assets/img/home/dress-blue.png" alt="Blue Dress For Woman">
+                        <img class="hover-image" src="./assets/img/home/women-dress.png" alt="Blue Dress For Woman (Hover)">
+                        <span class="heart-icon"><i class="fa-regular fa-heart"></i></span>
+                        <span class="share-icon"><i class="fa-solid fa-expand"></i></span>
+                        <span class="compare-icon"><i class="fa-solid fa-code-compare"></i></span>
+                        <h3>Black T-Shirt For Woman</h3>
+                        <p class="price">$18.00</p>
+                        <button class="add-to-cart btn-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div> 
+        </section>
         
         <section id="pagination-section">
             <ul class="pagination">
@@ -105,7 +303,7 @@
         <section id="instagram-section">
             <h2 style="margin-top: 100px;">FOLLOW US INSTAGRAM</h2>
             <p>Mauris luctus nisi sapien tristique dignissim ornare</p>
-            <div class="container">
+            <div class="footer-container">
                 <div class="instagram-container">
 
 
@@ -207,7 +405,7 @@
 
 
 
-    
+
 
 
     <script src="https://kit.fontawesome.com/10516cfaa0.js" crossorigin="anonymous"></script>
@@ -217,6 +415,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-        <script src="./assets/js/shop/shop.js"></script>
+    <script src="./assets/js/shop/shop.js"></script>
 </body>
+
 </html>

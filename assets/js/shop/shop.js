@@ -131,3 +131,18 @@ closeBtn.addEventListener('click', () => {
     logoBar.style.display = 'none'; 
 });
 
+
+// filter
+const minPrice = document.getElementById("min-price");
+const maxPrice = document.getElementById("max-price");
+const priceValue = document.getElementById("price-value");
+
+function updatePrice() {
+    priceValue.innerText = `$${minPrice.value} - $${maxPrice.value}`;
+}
+
+minPrice.addEventListener("input", updatePrice);
+maxPrice.addEventListener("input", updatePrice);
+
+updatePrice();
+
