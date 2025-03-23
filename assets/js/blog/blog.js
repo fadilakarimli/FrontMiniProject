@@ -55,7 +55,7 @@ searchOverlay.classList.add('search-overlay');
 
 searchOverlay.innerHTML = `
     <div class="search-box">
-        <input type="text" class="typesearch" placeholder="Type your search...">
+        <input type="text" class="typesearch" placeholder="Type keyword(s) here...">
         <span class="search-tag">Search</span>
     </div>
 `;

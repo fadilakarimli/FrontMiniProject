@@ -44,11 +44,38 @@ header {
     cursor: pointer;
     z-index: 101;
 }
+.search-tag{
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    color: #444;
+}
+
+.typesearch {
+    border: none;
+    border-bottom: 2px solid #fff; 
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.typesearch:focus {
+    border-bottom: 2px solid orange;
+}
 
 /* Sidebar */
+.contact-info p {
+    margin: 10px 0;
+    font-size: 14px;
+}
 .logo-bar {
     display: none;
-    margin-left: 30px;
+    margin-left: 5px;
     width: 80%;
     height: 150px;
     background: url('../../img/home/logo-bar.png') center/contain no-repeat;
@@ -60,7 +87,8 @@ header {
 }
 
 .sidebar {
-
+    align-items: center;
+    text-align: center;
     background: #1a1a1a;
     z-index: 999;
     background: url('../../img/home/logo-bar.png') center/cover no-repeat;
@@ -85,21 +113,47 @@ header {
 
 .social-icons {
     display: flex;
-    gap: 4px;
-    justify-content: start;
-    margin-top: auto;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 .social-icons a {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: white;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); 
+    font-size: 20px;
+}
+.social-icons i{
+    color: white!important;
+    margin-top: 10px!important;
+}
+
+.social-icons a i {
+    font-size: 24px;
+    color: white;
 }
 
 .social-icons a:hover {
-    color: #ff6f61;
+    background-color: white!important;
 }
+.social-icons .face:hover {
+    color: black!important;
+}
+.social-icons .twit:hover {
+    color: black!important;
+}
+
+.social-icons .insta:hover {
+    color: black!important;
+}
+
+.social-icons .lk:hover {
+    color: black!important;
+}
+
+
 
 .close-menu {
     position: absolute;
@@ -109,6 +163,7 @@ header {
     cursor: pointer;
     color: #fff;
 }
+
 
 
 .search-box {
@@ -126,7 +181,6 @@ header {
     color: #fff;
     outline: none;
 }
-
 
 #navbar .main {
     display: flex;
@@ -162,7 +216,7 @@ header {
     opacity: 0;
     visibility: hidden;
     z-index: 99;
-    top: 100%;
+    top: 190%;
     text-align: left;
     background: rgb(255, 255, 255);
     transition: transform 0.6s ease, opacity 0.6s ease;
@@ -177,47 +231,14 @@ header {
 
 
 .submenu li a {
-    padding: 10px 20px;
+    padding: 10px 50px;
     display: block;
     color: #000;
     white-space: nowrap;
 }
 
-.submenu-shop {
-    position: absolute;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
-    transform: perspective(600px) rotateX(-90deg);
-    transform-origin: top;
-    left: 0px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 99;
-    top: 100%;
-    text-align: left;
-    background: rgb(255, 255, 255);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
 
-.dropdown-shop:hover .submenu {
-    visibility: visible;
-    opacity: 1;
-    transform: perspective(600px) rotateX(0deg);
-    display: block;
-}
 
-.submenu-shop li {
-    padding: 10px 20px;
-}
-
-.submenu-shop li a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-.submenu-shop li a:hover {
-    color: #f39829;
-}
 
 #navbar .main-menu ul {
     display: flex;
@@ -225,6 +246,12 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+#navbar .main-menu ul li a:hover {
+    color: #d48c2a;
+    transition: all 0.9s;
+
 }
 
 #navbar .main-menu ul li {
@@ -313,6 +340,46 @@ header {
 @media only screen and (max-width: 400px) {
     .main {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-bottom {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-wrapper {
+        text-align: center;
+    }
+
+    .header-logo img {
+        max-width: 150px;
+    }
+
+    .header-menu ul {
+        display: block;
+        padding: 0;
+    }
+
+    .header-menu ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-logo img {
+        max-width: 120px;
+    }
+
+    .header-menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-menu ul li {
+        margin-bottom: 8px;
     }
 }
 

@@ -48,14 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+// search
 const searchIcon = document.querySelector('.search .fa-magnifying-glass');
 const searchOverlay = document.createElement('div');
 searchOverlay.classList.add('search-overlay');
 
 searchOverlay.innerHTML = `
     <div class="search-box">
-        <input type="text" class="typesearch" placeholder="Type your search...">
+        <input type="text" class="typesearch" placeholder="Type keyword(s) here...">
         <span class="search-tag">Search</span>
     </div>
 `;
@@ -76,6 +76,8 @@ closeIcon.addEventListener('click', () => {
     searchOverlay.classList.remove('active'); 
 });
 
+
+// menu
 const menuBar = document.querySelector('.menu-bar i'); 
 const body = document.body;
 
@@ -258,6 +260,7 @@ showProducts("NEW ARRIVAL");
 
 
 //slider dot and mouse 
+
 const slider = document.querySelector(".slider-sl");
 const dots = document.querySelectorAll(".dot");
 let index = 0;

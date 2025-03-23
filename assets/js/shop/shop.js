@@ -55,7 +55,7 @@ searchOverlay.classList.add('search-overlay');
 
 searchOverlay.innerHTML = `
     <div class="search-box">
-        <input type="text" class="typesearch" placeholder="Type your search...">
+        <input type="text" class="typesearch" placeholder="Type keyword(s) here...">
         <span class="search-tag">Search</span>
     </div>
 `;
@@ -75,6 +75,7 @@ searchIcon.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     searchOverlay.classList.remove('active'); 
 });
+
 
 const menuBar = document.querySelector('.menu-bar i'); 
 const body = document.body;
@@ -101,10 +102,10 @@ const socialIcons = document.createElement('div');
 socialIcons.classList.add('social-icons');
 
 const socialMedia = [
-    { href: '#', className: 'fa fa-facebook' },
-    { href: '#', className: 'fa fa-twitter' },
-    { href: '#', className: 'fa fa-instagram' },
-    { href: '#', className: 'fa fa-linkedin' },
+    { href: '#', className: 'fa fa-facebook face' },
+    { href: '#', className: 'fa fa-twitter twit' },
+    { href: '#', className: 'fa fa-instagram insta' },
+    { href: '#', className: 'fa fa-linkedin lk' },
 ];
 
 socialMedia.forEach(media => {
@@ -130,6 +131,8 @@ closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active'); 
     logoBar.style.display = 'none'; 
 });
+
+
 
 
 // filter
