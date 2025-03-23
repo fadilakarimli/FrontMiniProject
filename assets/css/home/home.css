@@ -207,6 +207,68 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+.main-menu {
+    position: relative;
+}
+
+.submenu-container {
+    position: absolute;
+    top: 190%;
+    left: 0;
+    display: flex;
+    background: white;
+    box-shadow: 0px 3px 11px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: perspective(600px) rotateX(-90deg);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    padding: 20px;
+    z-index: 99;
+}
+
+
+.submenu-shop, .submenu-pages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu-shop li, .submenu-pages li {
+    padding: 5px 0;
+}
+
+.submenu-shop li a, .submenu-pages li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+}
+
+.submenu-shop li strong, .submenu-pages li strong {
+    font-weight: bold;
+    display: block;
+    padding: 5px 15px;
+}
+
+.super-offer {
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+}
+
+.super-offer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dropdown-shop:hover .submenu-container {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
 .submenu {
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
@@ -220,6 +282,60 @@ header {
     text-align: left;
     background: rgb(255, 255, 255);
     transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+
+.submenu-features-list{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: top;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    top: 190%;
+    text-align: left;
+    background: rgb(255, 255, 255);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    width: 200px;
+    padding: 10px;
+}
+
+.submenu-blog-list{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: top;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    top: 190%;
+    text-align: left;
+    background: rgb(255, 255, 255);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    width: 200px;
+    padding: 10px;
+}
+
+
+
+.submenu-about-list{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: top;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    top: 190%;
+    text-align: left;
+    background: rgb(255, 255, 255);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    width: 200px;
+    padding: 10px;
 }
 
 .dropdown:hover .submenu {
@@ -236,6 +352,76 @@ header {
     color: #000;
     white-space: nowrap;
 }
+
+
+.submenu-pages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block; 
+    width: 100%;
+}
+
+.submenu-pages li {
+    padding: 5px 0;
+    display: block; 
+}
+
+.submenu-column {
+    width: 200px;
+    padding: 0 20px;
+    display: block;
+}
+
+.submenu-pages li {
+    display: block; 
+    padding: 5px 0;
+}
+
+.submenu-pages li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+
+
+
+/* dropshop */
+/* 
+.submenu-shop {
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 11px 0px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: top;
+    left: 0px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    top: 190%;
+    text-align: left;
+    background: rgb(255, 255, 255);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.dropdown-shop:hover .submenu-shop {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.submenu-shop li a {
+    padding: 10px 50px;
+    display: block;
+    color: #000;
+    white-space: nowrap;
+} */
+
+
+
+
 
 
 
