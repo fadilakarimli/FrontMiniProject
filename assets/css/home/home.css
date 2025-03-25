@@ -1149,6 +1149,85 @@ header {
 /* t-shirt collection  */
 
 
+@media (max-width: 1023px) {
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .left-side {
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+        align-self: flex-start;
+        margin-top: 0; 
+        margin-left: 0;
+    }
+
+    .right-side {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .left-side {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-left: 0; 
+    }
+
+    .right-side {
+        max-width: 350px;
+    }
+}
+
+
+
+@media (max-width: 1023px) {
+    .left-side {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 100px; 
+        margin-left: -56px;
+    }
+}
+
+@media (max-width: 767px) {
+    .left-side {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 100px; 
+        margin-left: -56px; 
+    }
+
+    .time-unit {
+        min-width: 50px;
+        padding: 5px;
+    }
+
+    .time-unit span {
+        font-size: 12px;
+    }
+
+    .time-unit p {
+        font-size: 8px;
+    }
+}
+
+
 
 #promotion-banner {
     position: relative;
@@ -1189,9 +1268,11 @@ header {
 .left-side {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     margin-top: 46px;
 }
+
 
 .time-unit {
     text-align: center;
@@ -1255,76 +1336,93 @@ header {
 }
 
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .content {
-    padding: 15px;
-  }
-  
-  .time-unit {
-    min-width: 50px;
-    padding: 8px;
-  }
-  
-  .time-unit span {
-    font-size: 20px;
-  }
-  
-  .time-unit p {
-    font-size: 10px;
-  }
-  
-  .right-side h1 {
-    font-size: 20px;
-  }
-  
-  .right-side p {
-    font-size: 12px;
-  }
+@media (max-width: 1023px) {
+    .right-side {
+        height: 281px;
+        width: 392px;
+        margin-top: 126px;
+    }
 }
 
 @media (max-width: 767px) {
-  .content {
-    padding: 10px;
-  }
-  
-  .left-side {
-    gap: 8px;
-    margin-bottom: 15px;
-  }
-  
-  .time-unit {
-    min-width: 40px;
-    padding: 5px;
-  }
-  
-  .time-unit span {
-    font-size: 16px;
-  }
-  
-  .time-unit p {
-    font-size: 8px;
-    margin-top: 2px;
-  }
-  
-  .right-side {
-    padding: 12px;
-  }
-  
-  .right-side h1 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .right-side p {
-    font-size: 10px;
-    margin-bottom: 12px;
-  }
-  
-  .right-side button {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
+    .right-side {
+        height: 281px;
+        width: 392px;
+        margin-top: 126px;
+    }
 }
+
+@media (max-width: 1023px) {
+    .right-side {
+        height: 281px;
+        width: 392px;
+        margin-top: 126px;
+        font-size: 0.9rem;
+    }
+    
+    .right-side h1 {
+        font-size: 28px;
+    }
+
+    .right-side p {
+        font-size: 0.85rem; 
+    }
+}
+
+@media (max-width: 767px) {
+    .right-side {
+        height: 281px;
+        width: 392px;
+        margin-top: 126px;
+        font-size: 0.8rem; 
+    }
+    
+    .right-side h1 {
+        font-size: 24px;
+        margin-left: -58px;
+    }
+
+    .right-side p {
+        font-size: 0.75rem; 
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .right-side {
+        height: 281px;
+        width: 392px;
+        margin-top: 126px;
+    }
+
+    .right-side p {
+        font-size: 10px !important; 
+        text-align: start !important; 
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+        width: 100%; 
+        margin-left: -40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .right-side {
+        height: 281px;
+        width: 392px;
+        margin-top: 126px;
+    }
+
+    .right-side p {
+        font-size: 10px !important; 
+        text-align: start !important; 
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+        margin-left: -40px;
+    }
+}
+
 
 
 
@@ -1953,6 +2051,82 @@ header {
 .footer-bottom {
     margin: 0 auto;
 }
+
+
+/* fashion girls */
+
+@media (max-width: 768px) {
+    #banner {
+      width: 100vw;
+    }
+  
+    #banner .banner-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    #banner .banner-text {
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+      padding: 0 20px;
+    }
+  
+    #banner .banner-text h1 {
+      font-size: 16px;
+      color: orange;
+    }
+  
+    #banner .banner-text h2 {
+      font-size: 16px; 
+    }
+  
+    #banner .banner-text p {
+      font-size: 8px; 
+      margin-bottom: 10px;
+    }
+  
+    #banner .banner-text button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  
+    #banner .banner-text button .now-text {
+      font-size: 9px;
+    }
+  }
+  
+@media (max-width: 480px) {
+    #banner .banner-text {
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+    }
+  
+    #banner .banner-text h1 {
+      font-size: 14px;
+    }
+  
+    #banner .banner-text h2 {
+      font-size: 16px !important; 
+    }
+  
+    #banner .banner-text p {
+      font-size: 8px !important; 
+      margin-bottom: 8px;
+    }
+  
+    #banner .banner-text button {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+  
+    #banner .banner-text button .now-text {
+      font-size: 8px;
+    }
+  }
+  
 
 
 #banner {
