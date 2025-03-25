@@ -233,10 +233,10 @@ closeBtn.addEventListener('click', () => {
         setTimeout(() => {
             document.querySelectorAll(".progress-bar").forEach(bar => {
                 let fill = bar.querySelector(".fill");
-                let percentage = parseInt(fill.innerText.trim()); // "85%" -> 85
-                let startPoint = 20; // Tünd qəhvəyi sabit qalacaq %
+                let percentage = parseInt(fill.innerText.trim()); 
+                let startPoint = 20;
 
                 fill.style.width = `${percentage - startPoint}%`; 
             });
-        }, 1000); // 1 saniyə sonra başlayır
+        }, 1000); 
     });
