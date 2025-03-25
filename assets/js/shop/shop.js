@@ -247,3 +247,7 @@ maxPrice.addEventListener("input", updatePrice);
 
 updatePrice();
 
+
+
+
+

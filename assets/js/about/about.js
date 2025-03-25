@@ -227,3 +227,16 @@ closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active'); 
     logoBar.style.display = 'none'; 
 });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            document.querySelectorAll(".progress-bar").forEach(bar => {
+                let fill = bar.querySelector(".fill");
+                let percentage = parseInt(fill.innerText.trim()); // "85%" -> 85
+                let startPoint = 20; // Tünd qəhvəyi sabit qalacaq %
+
+                fill.style.width = `${percentage - startPoint}%`; 
+            });
+        }, 1000); // 1 saniyə sonra başlayır
+    });
