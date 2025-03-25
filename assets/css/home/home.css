@@ -573,6 +573,60 @@ header {
 
 /* main */
 
+@media (max-width: 992px) {
+    #hero .hero-content h2 {
+        font-size: 70px;
+    }
+    #hero .hero-content h1 {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero .hero-content h2 {
+        font-size: 50px;
+    }
+    #hero .hero-content h1 {
+        font-size: 60px;
+    }
+    #hero .hero-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    #hero .hero-content h2 {
+        font-size: 40px;
+    }
+    #hero .hero-content h1 {
+        font-size: 50px;
+    }
+    #hero .hero-content p {
+        font-size: 14px;
+    }
+    #hero .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero .hero-image {
+        position: relative;
+        top: 0;
+        right: 0;
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    #hero .hero-image img {
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+}
+
+
 #hero {
     background-image: url(../../img/home/banner-background.jpg);
     height: 100%;
@@ -646,6 +700,7 @@ header {
 
 
 /* collection */
+
 
 #shop-collections {
     padding: 20px 0;
@@ -1092,6 +1147,7 @@ header {
 
 
 /* t-shirt collection  */
+
 
 
 #promotion-banner {
